@@ -15,37 +15,37 @@ namespace FizzBuzz.Tests
         }
 
         [Test]
-        public void GenerateList_ShouldReturn100Items()
+        public void Generate_ShouldReturn100Items()
         {
             Assert.AreEqual(100, numbers.Count);
         }
 
         [Test]
-        public void GenerateList_ShouldReturn1()
+        public void Generate_ShouldReturn1()
         {
             Assert.AreEqual("1", numbers[0]);
         }
 
         [Test]
-        public void GenerateList_ThirdItemShouldBeFizz()
+        public void Generate_ThirdItemShouldBeFizz()
         {
             Assert.AreEqual("Fizz", numbers[2]);
         }
 
         [Test]
-        public void GenerateList_SixthItemShouldBeFizz()
+        public void Generate_SixthItemShouldBeFizz()
         {
             Assert.AreEqual("Fizz", numbers[5]);
         }
 
         [Test]
-        public void GenerateList_FifthItemShouldBeBuzz()
+        public void Generate_FifthItemShouldBeBuzz()
         {
             Assert.AreEqual("Buzz", numbers[4]);
         }
 
         [Test]
-        public void GenerateList_FifteenthItemShouldBeFizzBuzz()
+        public void Generate_FifteenthItemShouldBeFizzBuzz()
         {
             Assert.AreEqual("FizzBuzz", numbers[14]);
         }
