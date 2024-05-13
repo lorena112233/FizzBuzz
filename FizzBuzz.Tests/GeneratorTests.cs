@@ -5,62 +5,48 @@ namespace FizzBuzz.Tests
 {
     public class Tests
     {
+        private IList<string> numbers;
+
         [SetUp]
         public void Setup()
         {
+            var generator = new Generator();
+            numbers = generator.Generate();
         }
 
         [Test]
         public void GenerateList_ShouldReturn100Items()
         {
-            var generator = new Generator();
-            var numbers = generator.Generate();
-
             Assert.AreEqual(100, numbers.Count);
         }
 
         [Test]
         public void GenerateList_ShouldReturn1()
         {
-            var generator = new Generator();
-            var numbers = generator.Generate();
-
             Assert.AreEqual("1", numbers[0]);
         }
 
         [Test]
         public void GenerateList_ThirdItemShouldBeFizz()
         {
-            var generator = new Generator();
-            var numbers = generator.Generate();
-
             Assert.AreEqual("Fizz", numbers[2]);
         }
 
         [Test]
         public void GenerateList_SixthItemShouldBeFizz()
         {
-            var generator = new Generator();
-            var numbers = generator.Generate();
-
             Assert.AreEqual("Fizz", numbers[5]);
         }
 
         [Test]
         public void GenerateList_FifthItemShouldBeBuzz()
         {
-            var generator = new Generator();
-            var numbers = generator.Generate();
-
             Assert.AreEqual("Buzz", numbers[4]);
         }
 
         [Test]
         public void GenerateList_FifteenthItemShouldBeFizzBuzz()
         {
-            var generator = new Generator();
-            var numbers = generator.Generate();
-
             Assert.AreEqual("FizzBuzz", numbers[14]);
         }
 
