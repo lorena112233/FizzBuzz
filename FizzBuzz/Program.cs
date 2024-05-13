@@ -6,7 +6,12 @@ namespace FizzBuzz
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var generator = new Generator();
+            var resultList = generator.Generate();
+
+            for(int i = 0; i < resultList.Count; i++){
+                Console.WriteLine(resultList[i]);
+            }
         }
     }
 }
