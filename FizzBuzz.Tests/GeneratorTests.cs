@@ -19,6 +19,15 @@ namespace FizzBuzz.Tests
             Assert.AreEqual(100, numbers.Count);
         }
 
+        [Test]
+        public void GenerateList_ShouldReturn1()
+        {
+            var generator = new Generator();
+            var numbers = generator.Generate();
+
+            Assert.AreEqual("1", numbers[0]);
+        }
+
 
     }
 }
