@@ -9,27 +9,42 @@ namespace FizzBuzz
 
         }
         
+        /* 
+        Loop to assign values from 1-100
+        Returns the list of strings with values to display.
+        */
         public IList<string> Generate()
         {
             var numbersList = new List<string>();
 
-            for(int i = 0; i< 100; i++){
+            for(int i = 0; i < 100; i++){
 
-                if(IsMultipleOf15(i+1)){
-                    numbersList.Add("FizzBuzz");
-                }
-                else if(IsMultipleOf3(i+1)){
-                    numbersList.Add("Fizz");
-                }
-                else if(IsMultipleOf5(i+1)){
-                    numbersList.Add("Buzz");
-                }
-                else{
-                    numbersList.Add((i+1).ToString());
-                }
+                numbersList.Add(TextToDisplay(i+1));
+
             }
 
             return numbersList;
+        }
+
+        /*
+        Returns the string value that should be displayed.
+        */
+        public string TextToDisplay(int numb)
+        {
+            if(IsMultipleOf15(numb))
+            {
+                return("FizzBuzz");
+            }
+            else if(IsMultipleOf3(numb))
+            {
+                return("Fizz");
+            }
+            else if(IsMultipleOf5(numb))
+            {
+                return("Buzz");
+            }
+            
+            return((numb).ToString());
         }
 
         private static bool IsMultipleOf3(int numb){
@@ -46,5 +61,6 @@ namespace FizzBuzz
         private static bool IsMultipleOf15(int numb){
             return numb % 15 == 0;
         }
+
     }
 }

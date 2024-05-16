@@ -14,6 +14,7 @@ namespace FizzBuzz.Tests
             numbers = generator.Generate();
         }
 
+        /* Generate */
         [Test]
         public void Generate_ShouldReturn100Items()
         {
@@ -50,6 +51,38 @@ namespace FizzBuzz.Tests
             Assert.AreEqual("FizzBuzz", numbers[14]);
         }
 
+        /* TextToDisplay */
+        [Test]
+        public void TextToDisplay_15ShouldReturnFizzBuzz()
+        {
+            var generator = new Generator();
+            var displayText = generator.TextToDisplay(30);
+            Assert.AreEqual("FizzBuzz", displayText);
+        }
+
+        [Test]
+        public void TextToDisplay_9ShouldReturnFizzBuzz()
+        {
+            var generator = new Generator();
+            var displayText = generator.TextToDisplay(9);
+            Assert.AreEqual("Fizz", displayText);
+        }
+
+        [Test]
+        public void TextToDisplay_35ShouldReturnFizzBuzz()
+        {
+            var generator = new Generator();
+            var displayText = generator.TextToDisplay(35);
+            Assert.AreEqual("Buzz", displayText);
+        }
+
+        [Test]
+        public void TextToDisplay_11ShouldReturn11()
+        {
+            var generator = new Generator();
+            var displayText = generator.TextToDisplay(11);
+            Assert.AreEqual("11", displayText);
+        }
 
     }
 }
